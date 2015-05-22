@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<record id="number_not_found_form" model="ir.ui.view">
+    <field name="name">asterisk_not_found_applicant.form</field>
+    <field name="model">number.not.found</field>
+    <field name="inherit_id" ref="base_phone.number_not_found_form"/>
+    <field name="arch" type="xml">
+        <group name="create-update" position="inside">
+            <group name="applicant" string="Create or Update an Applicant"
+                colspan="1" col="2">
+                
+                <field name="new_applicant_name"/>
+                
+                <button name="create_applicant" icon="gtk-new" colspan="2"
+                    string="Create Applicant with this Number" type="object"/>
+                <field name="to_update_applicant_id"
+                    on_change="onchange_to_update_applicant(to_update_applicant_id)"/>
+                <field name="current_applicant_phone" widget="phone"
+                    options="{'dial_button_invisible': True}"/>
+                <field name="current_applicant_mobile" widget="phone"
+                    options="{'dial_button_invisible': True}"/>
+                <button name="update_applicant" icon="gtk-convert" colspan="2"
+                    string="Update Applicant with this Number" type="object"/>
+            </group>
+        </group>
+    </field>
+</record>
+
+
+</data>
+</openerp>
