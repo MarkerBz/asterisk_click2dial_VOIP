@@ -5,7 +5,7 @@
     'category': 'Phone',
     'license': 'AGPL-3',
     'description': '',
-    'author': 'avs3.ua@gmail.com',
+    'author': 'Contractor Andrey S., 2014',
     'depends': ['asterisk_click2dial'],
     'data': [],
     'images': [],
